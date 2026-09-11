@@ -761,4 +761,11 @@ window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredIns
 async function instalarApp(){if(!deferredInstallPrompt){alert('Se o botão de instalação não aparecer, use o menu do navegador e escolha “Instalar app” ou “Adicionar à tela inicial”.');return;}deferredInstallPrompt.prompt();await deferredInstallPrompt.userChoice;deferredInstallPrompt=null;const b=document.getElementById('installAppBtn');if(b)b.hidden=true;}
 if('serviceWorker' in navigator) window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
 </script>
-</body></html>
+</body></html>academia-de-desenho-github/
+├── index.html
+├── novo-lobby.html
+├── manifest.json
+├── sw.js
+└── icons/
+    ├── icon-192.png
+    └── icon-512.png
