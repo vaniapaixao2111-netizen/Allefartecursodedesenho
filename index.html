@@ -769,3 +769,207 @@ if('serviceWorker' in navigator) window.addEventListener('load',()=>navigator.se
 └── icons/
     ├── icon-192.png
     └── icon-512.png
+<!-- 🛒 MATERIAIS ARTÍSTICOS -->
+<section class="materiais-artisticos">
+  <div class="materiais-header">
+    <span>🛒</span>
+    <div>
+      <h2>Materiais Profissionais para Artistas</h2>
+      <p>
+        Ferramentas recomendadas para desenho, pintura em tela,
+        acrílica, aquarela e colorização.
+      </p>
+    </div>
+  </div>
+
+  <div class="materiais-grid">
+
+    <article class="material-card">
+      <div class="material-icon">✏️</div>
+      <h3>Faber-Castell SuperSoft</h3>
+      <p>Lápis de cor macios para colorização e ilustrações.</p>
+      <strong>R$ 166,92</strong>
+      <button onclick="comprarMaterial('Faber-Castell SuperSoft')">
+        🛒 Ver produto
+      </button>
+    </article>
+
+    <article class="material-card">
+      <div class="material-icon">🧽</div>
+      <h3>Borracha Elétrica</h3>
+      <p>Ideal para apagar pequenos detalhes e criar pontos de luz.</p>
+      <strong>A partir de R$ 28,80</strong>
+      <button onclick="comprarMaterial('Borracha Elétrica')">
+        🛒 Ver produto
+      </button>
+    </article>
+
+    <article class="material-card">
+      <div class="material-icon">⚡</div>
+      <h3>Apontador Elétrico</h3>
+      <p>Para manter os lápis sempre bem apontados.</p>
+      <strong>A partir de R$ 39,90</strong>
+      <button onclick="comprarMaterial('Apontador Elétrico')">
+        🛒 Ver produto
+      </button>
+    </article>
+
+    <article class="material-card">
+      <div class="material-icon">🎨</div>
+      <h3>Tinta Acrílica</h3>
+      <p>Para pintura em tela e trabalhos artísticos.</p>
+      <strong>Preço varia</strong>
+      <button onclick="comprarMaterial('Tinta Acrílica')">
+        🛒 Ver produto
+      </button>
+    </article>
+
+    <article class="material-card">
+      <div class="material-icon">🖼️</div>
+      <h3>Tela para Pintura</h3>
+      <p>Suportes para pintura acrílica e outros trabalhos.</p>
+      <strong>Preço varia</strong>
+      <button onclick="comprarMaterial('Tela para Pintura')">
+        🛒 Ver produto
+      </button>
+    </article>
+
+    <article class="material-card">
+      <div class="material-icon">💧</div>
+      <h3>Aquarela</h3>
+      <p>Cores para estudos e pinturas em papel de aquarela.</p>
+      <strong>Preço varia</strong>
+      <button onclick="comprarMaterial('Aquarela')">
+        🛒 Ver produto
+      </button>
+    </article>
+
+    <article class="material-card">
+      <div class="material-icon">🖌️</div>
+      <h3>Pincéis Artísticos</h3>
+      <p>Pincéis para acrílica, aquarela e pintura em tela.</p>
+      <strong>A partir de R$ 51,00</strong>
+      <button onclick="comprarMaterial('Kit de Pincéis')">
+        🛒 Ver produto
+      </button>
+    </article>
+
+    <article class="material-card">
+      <div class="material-icon">📄</div>
+      <h3>Papel para Aquarela</h3>
+      <p>Papel de maior gramatura para técnicas com água.</p>
+      <strong>Preço varia</strong>
+      <button onclick="comprarMaterial('Papel para Aquarela')">
+        🛒 Ver produto
+      </button>
+    </article>
+
+  </div>
+</section>
+
+<style>
+.materiais-artisticos {
+  margin: 30px 0;
+  padding: 28px 20px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, #17172d, #35206b);
+  color: white;
+}
+
+.materiais-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.materiais-header > span {
+  font-size: 42px;
+}
+
+.materiais-header h2 {
+  margin: 0;
+  font-size: 25px;
+}
+
+.materiais-header p {
+  margin: 7px 0 0;
+  opacity: .85;
+  line-height: 1.5;
+}
+
+.materiais-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 16px;
+}
+
+.material-card {
+  background: white;
+  color: #17172d;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,.15);
+}
+
+.material-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.material-card h3 {
+  margin: 5px 0 8px;
+}
+
+.material-card p {
+  min-height: 48px;
+  color: #666;
+  line-height: 1.4;
+}
+
+.material-card strong {
+  display: block;
+  margin: 15px 0;
+  font-size: 18px;
+}
+
+.material-card button {
+  width: 100%;
+  border: 0;
+  border-radius: 13px;
+  padding: 12px;
+  background: #6c45ff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.material-card button:hover {
+  opacity: .9;
+}
+
+@media (max-width: 600px) {
+  .materiais-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .materiais-header h2 {
+    font-size: 21px;
+  }
+}
+
+@media (max-width: 400px) {
+  .materiais-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+<script>
+function comprarMaterial(nome) {
+  alert(
+    "🛒 " + nome +
+    "\\n\\nEm breve você poderá acessar o produto e comparar opções de compra."
+  );
+}
+</script
